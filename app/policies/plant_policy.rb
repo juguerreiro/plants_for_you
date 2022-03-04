@@ -4,12 +4,17 @@ class PlantPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-
-    def create?
-      return true
-    end
-    
   end
-  
-  authorize @plant
+
+  def create?
+    return true
+  end
+
+  def new?
+    true
+  end
+
+  def show?
+    true
+  end
 end

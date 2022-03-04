@@ -1,16 +1,17 @@
 class PlantsController < ApplicationController
 
   def index
-   @plants = policy_scope(Plant).order(created_at: :desc)
-   @plants = Plant.all
+    @plants = policy_scope(Plant).order(created_at: :desc)
   end
 
   def show
     @plant = Plant.find(params[:id])
+    authorize @plant
   end
 
   def new
     @plant = Plant.new
+    authorize @plant
   end
 
   def create
