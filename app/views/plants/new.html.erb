@@ -1,0 +1,14 @@
+
+<h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
+
+<div class="container" style="width: 800px;">
+  <h2>Create your new Plant</h2>
+  <%= simple_form_for [ @plant] do |f| %>
+    <%= f.input :specie %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.input :quantity %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create", class: "btn btn-primary" %>
+  <% end %>
+</div>
