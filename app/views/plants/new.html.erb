@@ -1,4 +1,4 @@
-<%= render "shared/navbar" %>
+
 <h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
 
 <div class="container" style="width: 800px;">
@@ -8,6 +8,7 @@
     <%= f.input :price %>
     <%= f.input :description %>
     <%= f.input :quantity %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Create", class: "btn btn-primary" %>
   <% end %>
 </div>
