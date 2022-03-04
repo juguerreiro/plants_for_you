@@ -24,3 +24,13 @@
 
 <% end %>
 </div>
+
+<% if policy(Plant).create? %>
+  <%= link_to "New plant", new_plant_path %>
+<% end %>
+
+<% @plants.each do |plant| %>
+  <% if policy(plant).edit? %>
+    <%= link_to "Update", edit_plant_path(plant) %>
+  <% end %>
+<% end %>
