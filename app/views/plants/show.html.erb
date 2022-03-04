@@ -29,3 +29,7 @@
     </div>
   </div>
 </div>
+
+<% if policy(Plant).create? %>
+  <%= link_to "New Plant", new_plant_path %>
+<% end %>
