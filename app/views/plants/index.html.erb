@@ -1,0 +1,26 @@
+<h1>plants</h1>
+<div class="cards">
+<% @plants.each do |plants| %>
+ <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          <%= plants.specie %>
+
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        <%= plants.description %>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+</div>
