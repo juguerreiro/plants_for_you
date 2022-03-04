@@ -1,32 +1,0 @@
-[0G[1] pry(main)> exit    user.admin = true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser = User.where(email: ('mari@lewagon.com').first
-[1] pry(main)> exit    user.admin = true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser = User.where(email: ('mari@lewagon.com').first[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Puser[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.admin = true[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@  [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser= User.where(email: ('mari@lewagon.com').first[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Khash[:alface]1][K:legume][2Pnuts]{:nuts}[K[:nuts] = "castanha"[K(:nuts => "castanha")[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P :nuts => "castanha"[3@[]=[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P:nuts ="castanha"][1P]> "castanha"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K = {fruta: "banana", legume:"alface", proteina: "frango"}[19P "abacaxi" "limao"}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C,"abacaxi","limao"} "abacaxi", "limao"}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K[Kt\x_men("Wolverine")="colosso"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[:name = "Wolverine"]="colosso"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7P"Wolverine"]="colosso"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K  x_menputs x_menx_men.each do|x_man| puts "is powerfull" end[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K.each do|x_man| puts "is powerfull" end[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pputs "'#{x_man} is really powerfull!"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Px_men.each do |x_man|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kx_men << "Misty"= ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K,emmen= "vampira"[11@["vampira"][C[C[C[C[C[C[C[C[C[C[C'vampira'"vampira"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K[2Plsx_men[4]="vampira"[K[0]="Colossus" = ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmariaan[Kputs x_men[5Px_men = ["Wolverine", "Jean Gray", "Professor X", "Magneto"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kbooks:1,2,3="200miles"[3P["200"][5P[0]  books = ["200'][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pbooks = [2]twnty.authorauthor = "Jules"twnty = "200miles"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kclear[1Pexitpost.save[K.title = "robero"[K =Post.first[6PPost.first[6Pexitrakeexitclearhash[:customer_id][4Pmeal_id]={ meal_id: "1", customer_id: 2, employee: 3}}[K[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Prow[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Phash[:meal][1Pmeal] = { meal: "hamburguer"}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Carray [0][K= ["customer",1][C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K2==24 == 2[2Pexitutname[1P!!!???description[7Pnameeee   
-NameError: undefined local variable or method `nameeee' for main:Object
-from (pry):1:in `__pry__'
-[2] pry(main)> 
-[3] pry(main)> ]psdlksdjsdlijikdfjildslkjfslkdfjsdkfmsdkla/mcsalkcmklmdksllkdf
-[3] pry(main)> c
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> cc
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> c
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> exit
-exit          exit!         exit-all      exit-program  
-[3] pry(main)> exit
-exit          exit!         exit-all      exit-program  
-[3] pry(main)> exit
-exit          exit!         exit-all      exit-program  
-[3] pry(main)> exit
-[3] pry(main)> 
-[3] pry(main)> 
-[3] pry(main)> c
-[3] pry(main)> 
