@@ -37,12 +37,12 @@
   padding: 48px
 }
 
-//
-
+.create{
+  background-image: url(fundo_new.png);
+  padding-bottom: 200px;
+}
 
 body {
-  background-color: #94B77A;
-  background-image: linear-gradient(147deg, #94B77A 0%, #E4EFD7 74%);
   min-height: 100vh;
   font-family: 'Fira Sans', sans-serif;
 }
