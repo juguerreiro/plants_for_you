@@ -19,7 +19,7 @@ class PlantsController < ApplicationController
     @plant.user = current_user
     @plant.save
     
-    if @pant.valid?
+    if @plant.valid?
     redirect_to plants_path(@plant)
     else 
       flash[:errors] = @plant.errors.full_messages

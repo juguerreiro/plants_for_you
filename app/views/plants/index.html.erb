@@ -1,67 +1,38 @@
-<h1>Plants</h1>
-<%# <div class="cards">
-<% @plants.each do |plants| %>
- <%# <div class="card">
-    <div class="card__image-holder">
-      <%= cl_image_tag @plant.photo.key, height: 300, width: 400, crop: :fill %>
-    </div>
-    <div class="card-title">
-      <a href="#" class="toggle-info btn">
-        <span class="left"></span>
-        <span class="right"></span>
-      </a>
-      <h2>
-          <%= plants.specie %>
-
-      <%# </h2>
-    </div>
-    <div class="card-flap flap1">
-      <div class="card-description">
-        <%= plants.description %>
-      <%# </div>
-    </div>
-  </div>
-
-  <%= link_to plant_path(plant.id), method: :delete, data: { confirm: "Delete #{@plant.specie}?" } do %>
-        <%# <i class="fa fa-trash-o" aria-hidden="true"></i> %>
-      <%# <% end %> 
-
-<%# <% end %>  
-<%# </div>  %>
-<h1>Plants</h1>
-<ul id="plants">
+ 
+ <div class="heading">
+   <h2>Card Gallery</h2>
+ </div>
+ <div class="container">
+<div id="plants">
   <% @plants.each do |plant| %>
-    <li>
+   
       <%= link_to plant.specie, plant_path(plant.id) %>
-      <div class="card">
-    <div class="card__image-holder">
-    <%= cl_image_tag @plant.photo.key, height: 300, width: 400, crop: :fill %>
-    </div>
-    <div class="card-title">
-      <a href="#" class="toggle-info btn">
-        <span class="left"></span>
-        <span class="right"></span>
-      </a>
-      <h2>
-          <%= plant.specie %>
+                     
+          <section class="gallery-block cards-gallery">
+                    <div class="col-md-6 col-lg-4">          
+                    <div class="row">
+                      
+                        <div class="card border-0 transform-on-hover">
+                          <a class="lightbox" href="#"><img src=https://source.unsplash.com/300x225/?wave class="card-img-top"></a>
+                          
+                          <div class="card-body">
+                            <%= plant.specie %>
+                            <%= plant.description %>
+                          </div>
 
-       </h2>
-    </div>
-    <div class="card-flap flap1">
-      <div class="card-description">
-        <%= plant.description %>
-       </div>
-    </div>
-  </div>
-  </ul>
-      
-      <%= link_to plant_path(plant.id), method: :delete, data: { confirm: "Delete #{plant.specie}?" } do %>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <%= link_to plant_path(plant.id), method: :delete, data: { confirm: "Delete #{plant.specie}?" } do %>
         <i class="fa fa-trash-o" aria-hidden="true"></i>
       <% end %>
-    </li>
-  
-</ul>
-<% end %>
+      </div>
+   <% end %>
+
+
 
 <% if policy(Plant).create? %>
   <%= link_to "New plant", new_plant_path %>
@@ -76,3 +47,4 @@
     <%= link_to "Update", edit_plant_path(plant) %>
   <% end %>
 <% end %>
+
