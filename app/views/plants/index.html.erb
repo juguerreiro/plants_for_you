@@ -1,7 +1,7 @@
-<h1>plants</h1>
-<div class="cards">
+<h1>Plants</h1>
+<%# <div class="cards">
 <% @plants.each do |plants| %>
- <div class="card">
+ <%# <div class="card">
     <div class="card__image-holder">
       <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
     </div>
@@ -13,20 +13,62 @@
       <h2>
           <%= plants.specie %>
 
-      </h2>
+      <%# </h2>
     </div>
     <div class="card-flap flap1">
       <div class="card-description">
         <%= plants.description %>
-      </div>
+      <%# </div>
     </div>
   </div>
 
+  <%= link_to plant_path(plant.id), method: :delete, data: { confirm: "Delete #{@plant.specie}?" } do %>
+        <%# <i class="fa fa-trash-o" aria-hidden="true"></i> %>
+      <%# <% end %> 
+
+<%# <% end %>  
+<%# </div>  %>
+<h1>Plants</h1>
+<ul id="plants">
+  <% @plants.each do |plant| %>
+    <li>
+      <%= link_to plant.specie, plant_path(plant.id) %>
+      <div class="card">
+    <div class="card__image-holder">
+    <%= cl_image_tag @plant.photo.key, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          <%= plant.specie %>
+
+       </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        <%= plant.description %>
+       </div>
+    </div>
+  </div>
+  </ul>
+      
+      <%= link_to plant_path(plant.id), method: :delete, data: { confirm: "Delete #{plant.specie}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+    </li>
+  
+</ul>
 <% end %>
-</div>
 
 <% if policy(Plant).create? %>
   <%= link_to "New plant", new_plant_path %>
+<% end %>
+
+<% if policy(Plant).destroy? %>
+  <%= link_to "Delete plant", plants_path %>
 <% end %>
 
 <% @plants.each do |plant| %>

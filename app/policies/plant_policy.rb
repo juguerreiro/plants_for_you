@@ -11,10 +11,14 @@ class PlantPolicy < ApplicationPolicy
   end
 
   def new?
-    true
+    return true
   end
 
   def show?
-    true
+    return true
+  end
+
+  def destroy?
+    return true
   end
 end

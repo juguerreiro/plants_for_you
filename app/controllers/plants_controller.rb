@@ -18,6 +18,18 @@ class PlantsController < ApplicationController
     @plant = Plant.new(plant_params)
     @plant.user = current_user
     @plant.save
+    
+    if @pant.valid?
+    redirect_to plants_path(@plant)
+    else 
+      flash[:errors] = @plant.errors.full_messages
+       redirect_to to new_plant_path(@plant)
+    end
+  end
+
+  def destroy
+    @plant =Plant.find(params[:id])
+    @plant.destroy
     redirect_to plants_path
   end
 

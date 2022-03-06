@@ -30,6 +30,12 @@
   </div>
 </div>
 
+
+<%= link_to "Delete #{@plant.specie}",
+            plant_path(@plant),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
 <% if policy(Plant).create? %>
   <%= link_to "New Plant", new_plant_path %>
 <% end %>
