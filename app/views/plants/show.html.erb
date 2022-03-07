@@ -1,7 +1,8 @@
 <div class="container">
-  <h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
+  <div class="back-plants"><%= link_to "Back to all plants", plants_path, class: "link plant-header" %></div>
 
-  <div class="card-plant w-75 ps-10 mx-auto" >
+
+  <div class="card-plant ps-10 mx-auto" >
     <div class="img">
       <img src="https://multimidia.gazetadopovo.com.br/media/info/2017/201710/plantas-problemas-saudavel.png" alt="" class="img">
     </div>
@@ -10,26 +11,24 @@
     <div class="content">
       <div class="main">
         <h2 class="display-4"><%= @plant.specie%></h2>
-        <p><%= @plant.user.email %></p>
+        <p class="email"><%= @plant.user.email %></p>
       </div>
 
       <div class="price">
-        Price:
         <p>R$<%= @plant.price %></p>
       </div>
 
       <div class="paragraph">
-        Description:
         <p><%= @plant.description %></p>
       </div>
 
       <div class="bottons">
-        <button type="button" class="btn btn-success"><%= link_to "Add to your inventory", "#" %></button>
+        <button type="button" class="btn btn-success"><%= link_to "Add to your inventory", "#"%></button>
+      </div>
+      <div class="new-plant"><% if policy(Plant).create? %>
+        <button type="button" class="btn btn-success"><%= link_to "New Plant", new_plant_path%></button>
+      <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<% if policy(Plant).create? %>
-  <%= link_to "New Plant", new_plant_path %>
-<% end %>
