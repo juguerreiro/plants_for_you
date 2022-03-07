@@ -1,36 +1,60 @@
-<h1>plants</h1>
-<div class="cards">
-<% @plants.each do |plants| %>
- <div class="card">
-    <div class="card__image-holder">
-      <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+<div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.goinggreens.in/pub/media/wysiwyg/infortis/slideshow/air-pur-plant-banner2.jpg" class="d-block w-75 object-fit mx-auto" height="400px" alt="...">
     </div>
-    <div class="card-title">
-      <a href="#" class="toggle-info btn">
-        <span class="left"></span>
-        <span class="right"></span>
-      </a>
-      <h2>
-          <%= plants.specie %>
-
-      </h2>
-    </div>
-    <div class="card-flap flap1">
-      <div class="card-description">
-        <%= plants.description %>
-      </div>
+    <div class="carousel-item">
+      <img src="https://hayloft.co.uk/images/page/feeling_creative/indoor_plants_banner.jpg" class="d-block w-75 object-fit mx-auto" height="400px" alt="...">
     </div>
   </div>
-
-<% end %>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
-<% if policy(Plant).create? %>
-  <%= link_to "New plant", new_plant_path %>
-<% end %>
+<div class="container">
+  <h1 class= "title">Become a plant lover and spread the love</h1>
 
-<% @plants.each do |plant| %>
-  <% if policy(plant).edit? %>
-    <%= link_to "Update", edit_plant_path(plant) %>
-  <% end %>
-<% end %>
+  <div class="text-end me-3 mb-5">
+    <% if policy(Plant).create? %>
+      <%= link_to "New plant", new_plant_path, class:"btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <% @plants.each do |plant| %>
+        <div class="col-4 mb-5">
+          <div class="card-trip">
+            <% if plant.photo.key %>
+              <%= cl_image_tag plant.photo.key, class:"figure-img img-fluid rounded" %>
+            <% else %>
+              <%= image_tag "fotopadrao", class:"figure-img img-fluid rounded" %>
+            <% end  %>
+            <div class="card-trip-infos">
+              <div>
+                <h2 class="card-title"><%= plant.specie.upcase %></h2>
+                <p><%= plant.description.capitalize %></p>
+              </div>
+              <h2 class="card-trip-pricing">U$ <%= plant.price %></h2>
+              <% if policy(plant).edit? %>
+                <%= link_to 'Edit', edit_plant_path(plant), class: 'btn btn-success' %>
+                <%= link_to "Remove", plant_path(plant),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" },
+                      class: 'btn btn-danger'
+                  %>
+              <% end %>
+            </div>
+            <%= link_to "More details", plant_path(plant), class: "btn btn-primary w-100"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
