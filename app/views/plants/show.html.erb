@@ -3,9 +3,12 @@
 
 
   <div class="card-plant ps-10 mx-auto" >
-    <div class="img">
+  <% if @plant.photo.attached? %>
+    <%= cl_image_tag @plant.photo.key, class: "img" %>
+    <% else %>
       <img src="https://multimidia.gazetadopovo.com.br/media/info/2017/201710/plantas-problemas-saudavel.png" alt="" class="img">
-    </div>
+     <% end %>
+
 
 
     <div class="content">
