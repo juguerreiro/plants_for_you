@@ -1,25 +1,27 @@
 <div class="container">
-  <h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
+  <div class="back-plants"><%= link_to "Back to all plants", plants_path, class: "link plant-header" %></div>
 
-  <div class="card-plant w-75 ps-10 mx-auto" >
-    <div class="img">
+
+  <div class="card-plant ps-10 mx-auto" >
+  <% if @plant.photo.attached? %>
+    <%= cl_image_tag @plant.photo.key, class: "img" %>
+    <% else %>
       <img src="https://multimidia.gazetadopovo.com.br/media/info/2017/201710/plantas-problemas-saudavel.png" alt="" class="img">
-    </div>
+     <% end %>
+
 
 
     <div class="content">
       <div class="main">
         <h2 class="display-4"><%= @plant.specie%></h2>
-        <p><%= @plant.user.email %></p>
+        <p class="email"><%= @plant.user.email %></p>
       </div>
 
       <div class="price">
-        Price:
         <p>R$<%= @plant.price %></p>
       </div>
 
       <div class="paragraph">
-        Description:
         <p><%= @plant.description %></p>
       </div>
 
@@ -29,7 +31,3 @@
     </div>
   </div>
 </div>
-
-<% if policy(Plant).create? %>
-  <%= link_to "New Plant", new_plant_path %>
-<% end %>

@@ -1,20 +1,56 @@
-<h2>Log in</h2>
+<div class="overlay">
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="con">
+            <header class="head-form">
+              <h2>Log in</h2>
+              <p>login here using your username and password</p>
+            </header>
+            <br>
+           
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+            <div class="field-set">
+                
 
-<%= render "devise/shared/links" %>
+                <div class="form-inputs">
+                <%# <span class="input-item">
+                  <i class="fa fa-user-circle"></i>
+                </span> %>
+                  <%= f.input :email,
+                              required: false,
+                              autofocus: true,
+                              input_html: { autocomplete: "email" }, class:"fa fa-user-circle" %>
+                    <%# <span class="input-item">
+                      <i class="fa fa-key"></i>
+                    </span> %>
+                  <%= f.input :password,
+                              required: false,
+                              input_html: { autocomplete: "current-password" }, class:"form-input" %>
+                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Log in", class:"log-in login-button" %>
+              </div>  
+                  
+     <% end %>
+                <div class="other">
+                <%= link_to new_password_path(resource_name) do %>
+                                <!--      Forgot Password button-->
+                      <button class="btn submits frgt-pass">Forgot Password</button>
+                      <%end%>
+                <!--     Sign Up button -->
+                                                       
+
+                    <%= link_to new_registration_path(resource_name) do %>
+                      <button class="btn submits sign-up">Sign Up 
+                      
+                <!--         Sign Up font icon -->
+                      <i class="fa fa-user-plus" aria-hidden="true"></i>
+                      </button>
+                        <% end %>
+                  </div>
+             </div>
+          </div>
+      </div>
+   
