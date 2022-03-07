@@ -1,3 +1,33 @@
+.email {
+  font-family: 'Merriweather', serif;
+}
+
+.display-4 {
+  font-family: 'Merriweather', serif;
+}
+
+.paragraph {
+  font-family: 'Merriweather', serif;
+  opacity: 50%;
+}
+
+.price {
+  font-family: 'Merriweather', serif;
+  color: #4c5f3c;
+  font-size: x-large;
+}
+
+.back-plants {
+  margin: 30px 0;
+}
+
+.plant-header {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-bottom: solid 1px rgb(156, 155, 155);
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -8,9 +38,10 @@
 }
 
 .img {
-  height: 80%;
-  width: 311px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  border-right: solid 1px rgb(156, 155, 155);
 }
 
 .card-product h2 {
@@ -32,9 +63,11 @@
 }
 
 .card-plant {
-  display: flex;
+  font-family: 'Didact Gothic', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   background: white;
-  padding: 48px
+  padding: 32px 48px;
 }
 
 .create{
@@ -57,9 +90,18 @@ body {
 }
 
 .link {
-  font-family: 'Lobster', cursive;
-  font-family: 'Oswald', sans-serif;
-  font-family: 'Space Mono', monospace;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 30px 0;
+}
+
+.lin:hover {
+  opacity: 1;
 }
 
 .card-body {
