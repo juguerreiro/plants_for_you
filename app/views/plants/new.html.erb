@@ -1,5 +1,11 @@
 <div class="create">
-  <h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
+
+  <div class = "container mt-5" >
+    <%= link_to plants_path do %>
+    
+      <%= fa_icon("arrow-alt-circle-left") %>
+    <% end %>
+  </div>
 
   <div class="container" style="width: 800px;">
     <h2>Create your new Plant</h2>
@@ -12,4 +18,8 @@
       <%= f.submit "Create", class: "btn btn-primary" %>
     <% end %>
   </div>
+ 
 </div>
+
+
+
