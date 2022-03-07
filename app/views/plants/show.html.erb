@@ -24,7 +24,7 @@
       </div>
 
       <div class="bottons">
-        <button type="button" class="btn btn-success"><%= link_to "Add to your inventory", "#" %></button>
+        <button type="button" class="btn btn-success"><%= link_to "Buy now", plant_sales_path(@plant), method: :create, data: { confirm: "Are you sure?" } %></button>
       </div>
     </div>
   </div>

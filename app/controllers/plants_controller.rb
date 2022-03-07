@@ -22,6 +22,16 @@ class PlantsController < ApplicationController
     redirect_to plants_path
   end
 
+  def my_plants
+    @plant = Plant.new
+    @user = current_user
+    # pegar a venda que tem a ver com o usuario
+    @sales = @user.sales
+    # ter as plantas que o usuario vende
+    @plants = @user.plants
+    authorize @plant
+  end
+
   private
 
   def plant_params

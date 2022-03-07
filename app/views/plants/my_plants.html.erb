@@ -1,0 +1,40 @@
+<div class="container">
+  <h3>Welcome, <%= @user.email  %></h3>
+
+
+  <h4>My plants:</h4>
+  <div class="container">
+    <div class="row">
+      <% @plants.each do |plant| %>
+        <div class="col-4 mb-5">
+          <div class="card-trip">
+            <%# <%= cl_image_tag plant.photo.key, class:"figure-img img-fluid rounded" %>
+            <div class="card-trip-infos">
+              <div>
+                <div>
+                  <p>Specie:</p><h2><%= plant.specie.upcase %></h2>
+                </div>
+                <i class="fas fa-seedling color-principal"></i> <%= plant.quantity %></p>
+                <p><%= plant.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end %>
+    </div>
+  </div>
+
+
+  <h4>My sales:</h4>
+
+  <div class="container">
+    <div class="row">
+    <%@sales.each do |sale| %>
+      <%= sale.plant.specie %>
+      <%= sale.created_at %>
+    <%end%>
+
+
+    </div>
+  </div>
+</div>
