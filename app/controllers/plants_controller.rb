@@ -17,6 +17,7 @@ class PlantsController < ApplicationController
   def create
     @plant = Plant.new(plant_params)
     @plant.user = current_user
+    authorize @plant
     @plant.save
     redirect_to plants_path
   end

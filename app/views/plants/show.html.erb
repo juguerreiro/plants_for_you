@@ -1,9 +1,7 @@
-<%= render "shared/navbar" %>
-
 <div class="container">
   <h5 class="link"><%= link_to "Back to all plants", plants_path %></h5>
 
-  <div class="card-plant w-75" >
+  <div class="card-plant w-75 ps-10 mx-auto" >
     <div class="img">
       <img src="https://multimidia.gazetadopovo.com.br/media/info/2017/201710/plantas-problemas-saudavel.png" alt="" class="img">
     </div>
@@ -11,20 +9,22 @@
 
     <div class="content">
       <div class="main">
-        <h2><%= @plant.specie%></h2>
+        <h2 class="display-4"><%= @plant.specie%></h2>
         <p><%= @plant.user.email %></p>
       </div>
 
       <div class="price">
+        Price:
         <p>R$<%= @plant.price %></p>
       </div>
 
       <div class="paragraph">
+        Description:
         <p><%= @plant.description %></p>
       </div>
 
       <div class="bottons">
-        <p> <%= link_to "Buy now", "#" %></p>
+        <button type="button" class="btn btn-success"><%= link_to "Add to your inventory", "#" %></button>
       </div>
     </div>
   </div>
