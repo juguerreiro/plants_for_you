@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Welcome, <%= @user.email  %></h3>
+  <i class="fas fa-leaf-heart"></i><h3>Welcome plant lover, <%= current_user  .email%></h3>
 
 
   <h4 class ="text-cookie">My plants:</h4>
@@ -34,12 +34,10 @@
 
   <div class="container">
     <div class="row">
-    <%@sales.each do |sale| %>
-      <%= sale.plant.specie %>
-      <%= sale.created_at %>
-    <%end%>
-
-
+      <%@sales.each do |sale| %>
+        <%= sale.plant.specie %>
+        <%= sale.created_at %>
+      <%end%>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+<div class="create">
+
+  <div class = "container mt-5" >
+    <%= link_to plants_path do %>
+
+      <%= fa_icon("arrow-alt-circle-left") %>
+    <% end %>
+  </div>
+
+  <div class="container" style="width: 800px;">
+    <h2>Update your Plant</h2>
+    <%= simple_form_for [ @plant] do |f| %>
+      <%= f.input :specie %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :quantity %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Update", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+</div>
