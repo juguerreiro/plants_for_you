@@ -36,11 +36,10 @@ class PlantsController < ApplicationController
 
   def my_plants
     @plant = Plant.new
-    @user = current_user
     # pegar a venda que tem a ver com o usuario
-    @sales = @user.sales
+    @sales = current_user.sales
     # ter as plantas que o usuario vende
-    @plants = @user.plants
+    @plants = current_user.plants
     authorize @plant
   end
 

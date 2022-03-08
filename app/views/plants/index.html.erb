@@ -45,14 +45,6 @@
                 <p><%= plant.description.capitalize %></p>
               </div>
               <h2 class="card-trip-pricing">U$ <%= plant.price %></h2>
-              <% if policy(plant).edit? %>
-                <%= link_to 'Edit', edit_plant_path(plant), class: 'btn btn-success' %>
-                <%= link_to "Remove", plant_path(plant),
-                      method: :delete,
-                      data: { confirm: "Are you sure?" },
-                      class: 'btn btn-danger'
-                  %>
-              <% end %>
             </div>
             <%= link_to "More details", plant_path(plant), class: "btn btn-primary w-100"%>
           </div>
