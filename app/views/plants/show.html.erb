@@ -26,8 +26,8 @@
         <p><%= @plant.description %></p>
       </div>
 
-      <div class="bottons text-end me-3 mb-5">
-        <%= link_to "Buy now", my_plants_path(@plant), method: :create, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></button>
+     <div class="bottons text-end me-3 mb-5">
+        <%= link_to "Buy now", plant_sales_path(@plant), method: :post, class: "btn btn-primary" %></button>
       </div>
     </div>
   </div>
