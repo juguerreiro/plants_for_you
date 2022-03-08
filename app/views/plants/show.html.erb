@@ -26,7 +26,12 @@
         <p><%= @plant.description %></p>
       </div>
 
-     <div class="bottons text-end me-3 mb-5">
+      <div class="bottons text-end me-3 mb-5">
+        <%= link_to "Update", edit_plant_path(@plant), method: :update, class: "btn btn-primary" %></button>
+      </div>
+
+      <div class="bottons text-end me-3 mb-5">
+
         <%= link_to "Buy now", plant_sales_path(@plant), method: :post, class: "btn btn-primary" %></button>
       </div>
     </div>

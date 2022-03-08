@@ -6,11 +6,8 @@
               <p>login here using your username and password</p>
             </header>
             <br>
-           
-
 
             <div class="field-set">
-                
 
                 <div class="form-inputs">
                 <%# <span class="input-item">
@@ -28,11 +25,10 @@
                               input_html: { autocomplete: "current-password" }, class:"form-input" %>
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                 </div>
-
               <div class="form-actions">
                 <%= f.button :submit, "Log in", class:"log-in login-button" %>
-              </div>  
-                  
+              </div>
+
      <% end %>
                 <div class="other">
                 <%= link_to new_password_path(resource_name) do %>
@@ -40,11 +36,10 @@
                       <button class="btn submits frgt-pass">Forgot Password</button>
                       <%end%>
                 <!--     Sign Up button -->
-                                                       
 
                     <%= link_to new_registration_path(resource_name) do %>
-                      <button class="btn submits sign-up">Sign Up 
-                      
+                      <button class="btn submits sign-up">Sign Up
+
                 <!--         Sign Up font icon -->
                       <i class="fa fa-user-plus" aria-hidden="true"></i>
                       </button>
@@ -53,4 +48,3 @@
              </div>
           </div>
       </div>
-   

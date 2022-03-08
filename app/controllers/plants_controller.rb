@@ -22,13 +22,24 @@ class PlantsController < ApplicationController
     redirect_to plants_path
   end
 
+  def edit
+    @plant = Plant.find(params[:id])
+    authorize @plant
+  end
+
+  def update
+    @plant = Plant.find(params[:id])
+    @plant.update(plant_params)
+    authorize @plant
+    redirect_to plants_path
+  end
+
   def my_plants
     @plant = Plant.new
-    @user = current_user
     # pegar a venda que tem a ver com o usuario
-    @sales = @user.sales
+    @sales = current_user.sales
     # ter as plantas que o usuario vende
-    @plants = @user.plants
+    @plants = current_user.plants
     authorize @plant
   end
 
