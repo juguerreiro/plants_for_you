@@ -17,4 +17,12 @@ class PlantPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def my_plants?
+    true
+  end
+
+  def destroy?
+    true
+  end
 end

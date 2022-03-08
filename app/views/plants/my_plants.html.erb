@@ -1,0 +1,45 @@
+<div class="container">
+  <h3>Welcome, <%= @user.email  %></h3>
+
+
+  <h4 class ="text-cookie">My plants:</h4>
+  <div class="container">
+    <div class="row">
+      <% @plants.each do |plant| %>
+        <div class="col-4 mb-5">
+          <div class="card-trip">
+            <% if plant.photo.key %>
+              <%= cl_image_tag plant.photo.key, class:"figure-img img-fluid rounded" %>
+            <% else %>
+              <%= image_tag "fotopadrao", class:"figure-img img-fluid rounded" %>
+            <% end  %>
+            <div class="card-trip-infos">
+              <div>
+                <div>
+                  <p>Specie:</p><h2><%= plant.specie.upcase %></h2>
+                </div>
+                <i class="fas fa-seedling color-principal"></i> <%= plant.quantity %></p>
+                <p><%= plant.description %></p>
+                <i class="fas fa-trash color-trash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end %>
+    </div>
+  </div>
+
+
+  <h4 class ="text-cookie">My sales:</h4>
+
+  <div class="container">
+    <div class="row">
+    <%@sales.each do |sale| %>
+      <%= sale.plant.specie %>
+      <%= sale.created_at %>
+    <%end%>
+
+
+    </div>
+  </div>
+</div>

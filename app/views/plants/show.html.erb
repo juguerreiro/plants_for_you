@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="back-plants"><%= link_to "Back to all plants", plants_path, class: "link plant-header" %></div>
+  <div class="back-plants"><%= link_to "Back to all plants", plants_path, class: "link plant-header" %>
+  </div>
 
 
   <div class="card-plant ps-10 mx-auto" >
@@ -18,19 +19,15 @@
       </div>
 
       <div class="price">
-        <p>R$<%= @plant.price %></p>
+        <p><i class="fas fa-dollar-sign"></i><%= @plant.price %></p>
       </div>
 
       <div class="paragraph">
         <p><%= @plant.description %></p>
       </div>
 
-      <div class="bottons">
-        <button type="button" class="btn btn-success"><%= link_to "Add to your inventory", "#"%></button>
-      </div>
-      <div class="new-plant"><% if policy(Plant).create? %>
-        <button type="button" class="btn btn-success"><%= link_to "New Plant", new_plant_path%></button>
-      <% end %>
+      <div class="bottons text-end me-3 mb-5">
+        <%= link_to "Buy now", my_plants_path(@plant), method: :create, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></button>
       </div>
     </div>
   </div>
