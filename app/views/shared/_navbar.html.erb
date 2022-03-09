@@ -1,11 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to plants_path, class: "navbar-brand" do %>
-<<<<<<< Updated upstream
-      <%= image_tag "logo_planta" %>
-=======
       <%= image_tag "plant" %>
->>>>>>> Stashed changes
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
     <p class="text">Plants for you ✿ </p>
 
@@ -23,7 +20,7 @@
             <%= link_to "My Plants", my_plants_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/juguerreiro", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>

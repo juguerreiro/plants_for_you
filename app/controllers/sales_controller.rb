@@ -2,7 +2,7 @@ class SalesController < ApplicationController
   def create
     @plant = Plant.find(params[:plant_id])
     @user = current_user
-    @sale = Sale.new
+    @sale = Sale.new(sale_params)
     @sale.plant = @plant
     @sale.user = @user
     if @sale.save
@@ -13,6 +13,12 @@ class SalesController < ApplicationController
       render "plants/show"
     end
     authorize @sale
+  end
+
+  private
+
+  def sale_params
+    params.require(:sale).permit(:plant_id)
   end
 end
 
