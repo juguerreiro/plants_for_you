@@ -1,6 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to plants_path, class: "navbar-brand" do %>
+      <%= image_tag "plant" %>
       <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
     <p class="text">Plants for you ✿ </p>
